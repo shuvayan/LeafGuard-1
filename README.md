@@ -137,6 +137,7 @@ Challenges and Considerations
 Class Imbalance: Some classes may have significantly more images than others, which could lead to biased model predictions. Techniques like oversampling or class weight adjustments may be necessary to address this issue.
 Generalisation: Since the images were taken under controlled conditions, models trained on this dataset may not generalise well to real-world conditions, such as varying lighting, occlusions, or different backgrounds. It is important to test models on field-collected data for a robust evaluation.
 Disease Similarities: Some plant diseases have visually similar symptoms, making it challenging for both humans and models to distinguish between them. This necessitates careful feature extraction and model tuning.
+
 How to Access and Use
 The dataset can be easily accessed using TensorFlow Datasets:
 
@@ -145,6 +146,7 @@ The dataset can be easily accessed using TensorFlow Datasets:
 split="train": Specifies that we are loading the training split of the dataset.
 as_supervised=True: Loads the dataset in a format where images and labels are returned as (image, label) pairs.
 with_info=True: Loads additional information about the dataset, such as class names and number of images.
+
 Current Benchmarks
 Benchmark
 The PlantVillage dataset serves as a benchmark for evaluating image classification models in plant disease detection. As of 2022, the leading model on this dataset is adaptive minimal ensemble, achieving an accuracy of 100%. Other notable models include µ2Net+ (ViT-L/16) with 99.89% accuracy and DenseNet with 99.88% accuracy. These models demonstrate the effectiveness of deep learning architectures in accurately identifying plant 
